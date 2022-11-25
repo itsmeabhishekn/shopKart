@@ -4,23 +4,24 @@
     <div class="row">
         <div class="col col-12 col-sm-12 col-m-12 col-lg-12 col-xl-12 col-xxl-12">
             <div class="col row g-3 mt-5">
-                <div class="col col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-3">
+                <div *ngFor="let i of items" class="col col-12 col-sm-6 col-md-4 col-lg-4 col-xl-4 col-xxl-3">
 
                     <div class="card">
                         <div class="card">
-                            <img class="card-img-top" src="..." alt="Card image cap">
-                            <div class="card-body">
-                              <h5 class="card-title">Card title</h5>
-                              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <img height="300px" src="{{i.image}}" class="card-img-top" alt="...">
+                            <div class="card-body"> 
+                              <h5 class="card-title">{{i.title}}</h5>
+                              <p class="card-text">{{i.description}}</p>
                             </div>
                             <ul class="list-group list-group-flush">
-                              <li class="list-group-item">Cras justo odio</li>
-                              <li class="list-group-item">Dapibus ac facilisis in</li>
-                              <li class="list-group-item">Vestibulum at eros</li>
+                              <li class="list-group-item">id : {{i.id}}</li>
+                              <li class="list-group-item">price : {{i.price}}</li>
+                              <li class="list-group-item">category : {{i.category}}</li>
+                              <li class="list-group-item">rating : {{i.rating}} </li>
                             </ul>
                             <div class="card-body">
-                              <a href="#" class="card-link">Card link</a>
-                              <a href="#" class="card-link">Another link</a>
+                              <a href="#" class="card-link"></a>
+                              <a href="#" class="card-link">buy Now</a>
                             </div>
                           </div>
 
