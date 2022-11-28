@@ -7,6 +7,7 @@ import { AddItemComponent } from './add-item/add-item.component';
 import { ViewItemComponent } from './view-item/view-item.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule ,Routes,Route, ROUTES} from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 const myRoute : Routes=[
   {path:"",component:AddItemComponent},
@@ -24,7 +25,8 @@ const myRoute : Routes=[
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(myRoute)
+    RouterModule.forRoot(myRoute),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
